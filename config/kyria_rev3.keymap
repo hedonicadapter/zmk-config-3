@@ -21,14 +21,6 @@
 };
 
 / {
-    behaviors {
-        rot_kp: sensor_rotate_kp {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            #sensor-binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -46,7 +38,7 @@
                           &kp LGUI  &kp LEFT_ALT  &kp ESC  &kp SV_SPACE  &kp ENTER  &kp BACKSPACE  &kp ESC  &kp RIGHT_GUI  &kp RALT  &kp RCTRL
             >;
 
-            sensor-bindings = <&rot_kp UP DOWN_ARROW>;
+            sensor-bindings = <&inc_dec_kp UP DOWN_ARROW>;
         };
 
         left {
@@ -63,7 +55,7 @@
                                                        &kp LEFT_GUI    &kp LEFT_ALT       &kp ESC                  &kp SV_SPACE  &kp ENTER  &kp DEL    &kp ESC    &kp RIGHT_GUI         &kp RALT           &kp RCTRL
             >;
 
-            sensor-bindings = <&rot_kp RIGHT LEFT_ARROW>;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT_ARROW>;
         };
 
         right {
@@ -74,7 +66,7 @@
                                                            &kp LGUI          &kp LEFT_ALT        &kp ESC                   &kp SV_SPACE  &kp RETURN  &kp BACKSPACE  &kp ESC  &kp RGUI              &kp RIGHT_ALT        &kp RCTRL
             >;
 
-            sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
