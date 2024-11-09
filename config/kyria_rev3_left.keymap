@@ -21,12 +21,13 @@
     cs-gpios = <&gpio1 7 GPIO_ACTIVE_HIGH>;
 };
 
-split_inputs {
-    #address-cells = <1>;
-    #size-cells = <0>;
+\ {
+    split_inputs: split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
 
-    glidepoint_split: glidepoint_split@0 {
-        compatible = "zmk,input-split";
-        reg = <0>;
-    };
+        split_glidepoint: glidepoint_split@0 {
+            compatible = "zmk,input-split";
+            reg = <0>;
+        };
 };
