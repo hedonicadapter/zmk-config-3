@@ -38,3 +38,7 @@
     device = <&glidepoint>;
   };
 };
+
+&glidepoint_split {
+    device = <&glidepoint>;
+};
