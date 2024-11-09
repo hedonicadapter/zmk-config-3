@@ -25,7 +25,6 @@
         reg = <0x2a>;
         status = "okay";
         dr-gpios = <&gpio1 2 (GPIO_ACTIVE_HIGH)>;
-
         sensitivity = "4x";
         // sleep;
         no-taps;
@@ -33,20 +32,18 @@
 };
 
 / {
-  glidepoint_listener {
-    compatible = "zmk,input-listener";
-    device = <&glidepoint>;
-  };
-};
-
-/ {
     split_inputs {
         #address-cells = <1>;
         #size-cells = <0>;
-
         glidepoint_split: glidepoint_split@0 {
             compatible = "zmk,input-split";
             reg = <0>;
+            device = <&glidepoint>;
         };
+    };
+
+    glidepoint_listener {
+        compatible = "zmk,input-listener";
+        device = <&glidepoint_split>;  // Changed from glidepoint to glidepoint_split
     };
 };
