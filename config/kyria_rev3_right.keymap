@@ -39,6 +39,6 @@
   };
 };
 
-&glidepoint_split {
+&split_glidepoint {
     device = <&glidepoint>;
 };
