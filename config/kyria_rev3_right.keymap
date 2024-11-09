@@ -26,7 +26,7 @@
         status = "okay";
         dr-gpios = <&gpio1 2 (GPIO_ACTIVE_HIGH)>;
 
-        sensitivity = "4x";
+        sensitivity = "2x";
         // sleep;
         no-taps;
     };
@@ -38,3 +38,4 @@
     device = <&glidepoint>;
   };
 };
+
