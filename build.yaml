@@ -25,7 +25,7 @@ include:
   - board: nice_nano_v2
     shield: kyria_rev3_right
     siblings:
-      - split_glidepoint@0
+      - glidepoint_split@0
     snippet: zmk-usb-logging
 
   # - board: nice_nano_v2
