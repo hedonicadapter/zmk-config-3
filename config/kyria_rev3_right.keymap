@@ -35,6 +35,6 @@
 / {
   glidepoint_listener {
     compatible = "zmk,input-listener";
-    device = <&split_glidepoint>;
+    device = <&glidepoint>;
   };
 };
