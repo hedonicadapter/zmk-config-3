@@ -45,7 +45,6 @@
             compatible = "zmk,input-split";
             status = "okay";
             reg = <0>;
-            input = <&glidepoint>;  // Changed from 'source' to 'input'
         };
     };
 
