@@ -3,6 +3,7 @@
  *
  * SPDX-License-Identifier: MIT
  */
+
 #include "keys_sv.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -24,6 +25,7 @@
         reg = <0x2a>;
         status = "okay";
         dr-gpios = <&gpio1 2 (GPIO_ACTIVE_HIGH)>;
+
         sensitivity = "4x";
         // sleep;
         no-taps;
@@ -31,26 +33,8 @@
 };
 
 / {
-    chosen {
-        zmk,glidepoint = &glidepoint;
-    };
-
-    split_inputs: split_inputs {
-        compatible = "zmk,split-inputs";
-        #address-cells = <1>;
-        #size-cells = <0>;
-        status = "okay";
-        input = <&glidepoint>;
-
-        split_glidepoint: glidepoint_split@0 {
-            compatible = "zmk,input-split";
-            status = "okay";
-            reg = <0>;
-        };
-    };
-
-    glidepoint_listener {
-        compatible = "zmk,input-listener";
-        device = <&split_glidepoint>;
-    };
+  glidepoint_listener {
+    compatible = "zmk,input-listener";
+    device = <&glidepoint>;
+  };
 };
