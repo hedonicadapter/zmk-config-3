@@ -12,9 +12,6 @@
 #include <behaviors/mouse_keys.dtsi>
 #include "shared_keymap.dtsi"
 
-#define ZMK_USB_LOGGING    // Enable USB logging
-#define ZMK_LOG_LEVEL 4    // Most verbose logging
-
 &led_strip {
     chain-length = <6>;
     // chain-length = <31>; // Uncomment if using both per-key and underglow LEDs
@@ -32,7 +29,6 @@
         sensitivity = "2x";
         sleep;
         no-taps;
-        zephyr,logging = <4>;
     };
 };
 
