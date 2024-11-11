@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include "split_inputs.dtsi"
 #include "keys_sv.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
