@@ -30,3 +30,11 @@
         sensitivity = "1x";
     };
 };
+
+/ {
+  glidepoint_input_listener: glidepoint_input {
+    compatible = "zmk,input-listener";
+    device = <&glidepoint_split>;
+  };
+};
+
