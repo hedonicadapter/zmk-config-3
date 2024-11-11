@@ -26,16 +26,10 @@
         status = "okay";
         dr-gpios = <&gpio1 2 (GPIO_ACTIVE_HIGH)>;
 
-        sensitivity = "2x";
-        sleep;
-        no-taps;
+        sensitivity = 1x";
     };
 };
 
-/ {
-  glidepoint_listener {
-    compatible = "zmk,input-listener";
+&glidepoint_split {
     device = <&glidepoint>;
-  };
 };
-
