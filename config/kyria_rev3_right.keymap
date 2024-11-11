@@ -30,3 +30,7 @@
         sensitivity = "1x";
     };
 };
+
+&glidepoint_split {
+    device = <&glidepoint>;
+};
