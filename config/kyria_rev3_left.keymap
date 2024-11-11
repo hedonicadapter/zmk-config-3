@@ -20,11 +20,3 @@
 &nice_view_spi {
     cs-gpios = <&gpio1 7 GPIO_ACTIVE_HIGH>;
 };
-
-/ {
-  glidepoint_input_listener: glidepoint_input {
-    compatible = "zmk,input-listener";
-    device = <&glidepoint_split>;
-  };
-};
-
