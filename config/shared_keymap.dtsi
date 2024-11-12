@@ -12,7 +12,7 @@
             bindings = <
 &kp TAB     &kp Q  &kp W  &kp E     &kp R         &kp T                                                     &kp Y          &kp U     &kp I         &kp O       &kp P            &kp SV_A_RING
 &kp LCTRL   &kp A  &kp S  &kp D     &kp F         &kp G                                                     &kp H          &kp J     &kp K         &kp L       &kp SV_O_UMLAUT  &kp SV_A_UMLAUT
-&kp LSHIFT  &kp Z  &kp X  &kp C     &kp V         &kp B    &none         &mo 1      &mo 2          &none    &kp N          &kp M     &kp SV_COMMA  &kp SV_DOT  &kp SV_MINUS     &kp RIGHT_SHIFT
+&kp LSHIFT  &kp Z  &kp X  &kp C     &kp V         &kp B    &kp SV_ASTRK  &mo 1      &mo 2          &tog 3   &kp N          &kp M     &kp SV_COMMA  &kp SV_DOT  &kp SV_MINUS     &kp RIGHT_SHIFT
                           &kp LGUI  &kp LEFT_ALT  &kp ESC  &kp SV_SPACE  &kp ENTER  &kp BACKSPACE  &kp ESC  &kp RIGHT_GUI  &kp RALT  &kp RCTRL
             >;
 
@@ -29,7 +29,7 @@
             bindings = <
 &kt TAB         &none                &none             &kp UP          &kp SV_AMPERSAND   &kp SV_PIPE                                                             &none                 &none              &none      &none  &none  &none
 &kp LCTRL       &none                &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT          &kp SV_ACUTE                                                            &kp SV_DOUBLE_QUOTES  &kp SV_APOSTROPHE  &none      &none  &none  &none
-&kp LEFT_SHIFT  &kp SV_LEFT_BRACKET  &kp SV_LESS_THAN  &kp SV_SLASH    &kp SV_LEFT_BRACE  &kp SV_LEFT_PARENTHESIS  &none         &none      &mkp LCLK  &mkp RCLK  &none                 &none              &none      &none  &none  &kp RSHFT
+&kp LEFT_SHIFT  &kp SV_LEFT_BRACKET  &kp SV_LESS_THAN  &kp SV_SLASH    &kp SV_LEFT_BRACE  &kp SV_LEFT_PARENTHESIS  &trans        &none      &mkp LCLK  &mkp RCLK  &none                 &none              &none      &none  &none  &kp RSHFT
                                                        &kp LEFT_GUI    &kp LEFT_ALT       &kp ESC                  &kp SV_SPACE  &kp ENTER  &kp DEL    &kp ESC    &kp RIGHT_GUI         &kp RALT           &kp RCTRL
             >;
 
@@ -40,11 +40,22 @@
             bindings = <
 &kp TAB         &kp SV_N1             &kp SV_N2            &kp SV_N3         &kp SV_N4           &kp SV_N5                                                                   &kp SV_N6             &kp SV_N7            &kp SV_N8  &kp SV_N9  &kp SV_N0  &kp SV_QUESTION
 &kp LCTRL       &none                 &none                &none             &none               &kp SV_GRAVE                                                                &kp SV_DOUBLE_QUOTES  &kp SV_SINGLE_QUOTE  &none      &none      &none      &none
-&kp LEFT_SHIFT  &kp SV_RIGHT_BRACKET  &kp SV_GREATER_THAN  &kp SV_BACKSLASH  &kp SV_RIGHT_BRACE  &kp SV_RIGHT_PARENTHESIS  &none         &none       &none          &none    &none                 &none                &none      &none      &none      &kp RIGHT_SHIFT
+&kp LEFT_SHIFT  &kp SV_RIGHT_BRACKET  &kp SV_GREATER_THAN  &kp SV_BACKSLASH  &kp SV_RIGHT_BRACE  &kp SV_RIGHT_PARENTHESIS  &trans        &none       &none          &none    &none                 &none                &none      &none      &none      &kp RIGHT_SHIFT
                                                            &kp LGUI          &kp LEFT_ALT        &kp ESC                   &kp SV_SPACE  &kp RETURN  &kp BACKSPACE  &kp ESC  &kp RGUI              &kp RIGHT_ALT        &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        focal {
+            bindings = <
+&trans  &kp V  &kp L  &kp H   &kp G   &kp K                                   &kp Q       &kp F   &kp O          &kp U         &kp J      &trans
+&trans  &kp S  &kp R  &kp N   &kp T   &kp B                                   &kp Y       &kp C   &kp A          &kp E         &kp I      &trans
+&trans  &kp Z  &kp X  &kp M   &kp D   &kp P   &trans  &trans  &trans  &trans  &kp SV_SQT  &kp W   &kp SV_PERIOD  &kp SV_COMMA  &kp MINUS  &trans
+                      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
         };
     };
 };
