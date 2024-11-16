@@ -7,6 +7,8 @@
         dr-gpios = <&gpio1 2 (GPIO_ACTIVE_HIGH)>;
 
         sensitivity = "2x";
+
+    };
 };
 
 
