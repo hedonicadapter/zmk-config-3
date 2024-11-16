@@ -6,9 +6,7 @@
         status = "disabled";
         dr-gpios = <&gpio1 2 (GPIO_ACTIVE_HIGH)>;
 
-        sensitivity = "1x";
-        sleep;
-    };
+        sensitivity = "2x";
 };
 
 
@@ -18,13 +16,13 @@
     tpad_central_listener {
         compatible = "zmk,input-listener";
         device = <&glidepoint0>;
-        xy-swap;
+        y-invert;
 	};
 
     tpad_peripheral_listener {
         compatible = "zmk,input-listener";
         device = <&glidepoint1>;
-        xy-swap;
+        y-invert;
     };
 };
 
