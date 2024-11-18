@@ -51,7 +51,7 @@
             bindings = <
 &trans  &kp V  &kp L  &kp H   &kp G   &kp K                                   &kp Q       &kp F   &kp O          &kp U         &kp J      &trans
 &trans  &kp S  &kp R  &kp N   &kp T   &kp B                                   &kp Y       &kp C   &kp A          &kp E         &kp I      &trans
-&trans  &kp Z  &kp X  &kp M   &kp D   &kp P   &trans  &trans  &trans  &trans  &kp SV_SQT  &kp W   &kp SV_PERIOD  &kp SV_COMMA  &kp MINUS  &trans
+&trans  &kp Z  &kp X  &kp M   &kp D   &kp P   &trans  &trans  &trans  &tog 0 &kp SV_SQT  &kp W   &kp SV_PERIOD  &kp SV_COMMA  &kp MINUS  &trans
                       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans
             >;
 
