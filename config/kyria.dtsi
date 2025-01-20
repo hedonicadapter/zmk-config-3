@@ -1,5 +1,3 @@
-#include <input/processors.dtsi>
-
 / {
     split_inputs {
         #address-cells = <1>;
