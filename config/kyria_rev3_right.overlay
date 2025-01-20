@@ -1,36 +1,22 @@
-
 #include "kyria.dtsi"
 
-&i2c0 {
+&pro_micro_i2c {
     status = "okay";
-    glidepoint0: glidepoint@2a {
+
+    glidepoint: glidepoint@0 {
+        compatible = "cirque,pinnacle";
+        reg = <0>;
+        spi-max-frequency = <1000000>;
         status = "okay";
+        dr-gpios = <&gpio1 2 (GPIO_ACTIVE_HIGH)>;
+
+        sensitivity = "2x";
+        y-invert;
     };
 };
 
-&i2c0_default {
-    group1 {
-      bias-pull-up;
-    };
-};
+&glidepoint_split {
+    device = <&glidepoint>;
 
-/ {
-    /* THIS only makes keymap binding happy, nothing happens on peripheral side */
-	glidepoint1: virtual_input {
-		compatible = "zmk,virtual-input";
-	};
-
-    input_relay_config_102 {
-        compatible = "zmk,split-peripheral-input-relay";
-
-        /* peripheral side input device, used to... */
-		/*  - be intecepted on peripheral; */
-		/*  - and then, be resurrected as `zmk,virtual-device` on central; */
-        device = <&glidepoint0>;
-
-        /* channel id, used to be be transfered along with all input events. */
-		/* NOTE 1: pick any 8bit integer. (1 - 255) */
-		/* NOTE 2: should matching relay-channel on central overlay */
-		relay-channel = <102>;
-    };
+    input-processors = <&zip_temp_layer 4 500>;
 };
