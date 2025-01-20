@@ -1,3 +1,5 @@
+#include <input/processors.dtsi>
+
 &i2c0 {
     status = "disabled";
     glidepoint0: glidepoint@2a {
