@@ -16,6 +16,7 @@
 	/* &glidepoint0 on central, &glidepoint1 on peripheral */
     tpad_central_listener {
         compatible = "zmk,input-listener";
+        input-processors = <@zip_temp_layer 4 500>;
         device = <&glidepoint0>;
         y-invert;
 	};
