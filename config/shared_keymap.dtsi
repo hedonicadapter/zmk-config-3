@@ -6,11 +6,6 @@
 #include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <input/processors.dtsi>
-
-&glidepoint_listener {
-        input-processors = <&zip_temp_layer 3 500>;
-};
 
 / {
     keymap {
