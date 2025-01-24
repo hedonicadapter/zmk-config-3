@@ -11,7 +11,7 @@
 #include <input/processors.dtsi>
 
 &glidepoint_listener {
-        input-processors = <&zip_temp_layer 3 250>;
+        input-processors = <&zip_temp_layer 3 500>;
 };
 
 / {
@@ -44,7 +44,7 @@
             bindings = <
 &kp TAB         &kp SV_N1             &kp SV_N2            &kp SV_N3         &kp SV_N4           &kp SV_N5                                                                   &kp SV_N6  &kp SV_N7      &kp SV_N8  &kp SV_N9  &kp SV_N0    &kp SV_QUESTION
 &kp LCTRL       &none                 &none                &none             &none               &none                                                                       &none      &none          &none      &none      &none        &none
-&kp LEFT_SHIFT  &kp SV_RIGHT_BRACKET  &kp SV_GREATER_THAN  &kp SV_BACKSLASH  &kp SV_RIGHT_BRACE  &kp SV_RIGHT_PARENTHESIS  &trans        &none       &none          &none    &none      &none          &none      &none      &kp SV_PLUS  &kp RIGHT_SHIFT
+&kp LEFT_SHIFT  &kp SV_RIGHT_BRACKET  &kp SV_GREATER_THAN  &kp SV_BACKSLASH  &kp SV_RIGHT_BRACE  &kp SV_RIGHT_PARENTHESIS  &trans        &none       &none          &none    &none      &none          &none      &none      &kp SV_PLUS  &kp RSHIFT
                                                            &kp LGUI          &kp LEFT_ALT        &kp ESC                   &kp SV_SPACE  &kp RETURN  &kp BACKSPACE  &kp ESC  &kp RGUI   &kp RIGHT_ALT  &kp RCTRL
             >;
 
@@ -53,10 +53,10 @@
 
         mouze {
             bindings = <
-&none  &none  &none     &none     &none         &none                                                               &none           &none           &none            &none            &none  &none
-&none  &none  &mkp MB2  &mkp MB3  &mkp MB1      &none                                                               &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT  &none  &none
-&none  &none  &none     &none     &none         &none    &none          &none       &none           &none           &none           &none            &none           &none            &none  &none
-                        &kp LGUI  &kp LEFT_ALT  &kp ESC  &kp SV_SPACE   &kp RETURN  &kp BACKSPACE   &kp ESC         &kp RGUI        &kp RIGHT_ALT    &kp RCTRL
+&kp TAB         &trans  &trans    &trans    &trans        &trans                                                               &trans          &trans          &trans           &trans            &trans  &trans
+&kp LCTRL       &trans  &mkp MB2  &mkp MB3  &mkp MB1      &trans                                                               &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &msc SCRL_RIGHT   &trans  &trans
+&kp LEFT_SHIFT  &trans  &trans    &trans    &trans        &trans    &trans         &trans      &trans          &trans          &trans          &trans          &trans           &trans            &trans  &kp RSHIFT
+                                  &kp LGUI  &kp LEFT_ALT  &kp ESC   &kp SV_SPACE   &kp RETURN  &kp BACKSPACE   &kp ESC         &kp RGUI        &kp RIGHT_ALT   &kp RCTRL
             >;
         };
 
